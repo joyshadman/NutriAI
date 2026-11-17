@@ -1,0 +1,11 @@
+.next
+node_modules
+package-lock.json
+next-env.d.ts
+tsconfig.tsbuildinfo
+.agents
+.aider-desk
+docs
+public
+**/AGENTS.md
+**/CLAUDE.md

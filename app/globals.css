@@ -1,0 +1,86 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: oklch(0.98 0.01 85);
+  --color-surface-raised: oklch(1 0 0);
+  --color-text: oklch(0.24 0.02 60);
+  --color-text-muted: oklch(0.52 0.02 60);
+  --color-accent: oklch(0.5 0.12 145);
+  --color-accent-strong: oklch(0.42 0.11 145);
+  --color-border: oklch(0.64 0.01 85);
+  --color-danger: oklch(0.55 0.18 25);
+  --color-focus: oklch(0.62 0.16 150);
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl: 2rem;
+  --text-3xl--line-height: 2.5rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --spacing-section: 2rem;
+
+  --radius-control: 0.5rem;
+  --radius-card: 0.75rem;
+  --radius-full: 9999px;
+
+  --shadow-card: 0 1px 2px oklch(0.3 0 0 / 0.08);
+
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: cubic-bezier(0.2, 0, 0.2, 1);
+  --duration-overlay: 200ms;
+
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+}
+
+:root.dark {
+  --color-surface: oklch(0.2 0.02 60);
+  --color-surface-raised: oklch(0.26 0.02 60);
+  --color-text: oklch(0.96 0.01 85);
+  --color-text-muted: oklch(0.74 0.02 85);
+  --color-accent: oklch(0.78 0.13 145);
+  --color-accent-strong: oklch(0.72 0.14 145);
+  --color-border: oklch(0.56 0.02 60);
+  --color-danger: oklch(0.72 0.17 25);
+  --color-focus: oklch(0.8 0.15 150);
+  --shadow-card: 0 1px 2px oklch(0 0 0 / 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid CanvasText;
+    outline-offset: 2px;
+  }
+}
